@@ -155,6 +155,29 @@
   .privacy h2 span { color: var(--accent); }
   .privacy p { color: var(--muted); max-width: 44em; margin: 16px auto 0; }
 
+  /* wachtlijst */
+  .wachtlijst {
+    margin: 26px 0 0; text-align: center; padding: 56px 26px;
+    background: linear-gradient(135deg, rgba(255,149,0,.16), rgba(255,107,0,.04)), var(--panel);
+    border-radius: 18px; border: 1px solid rgba(255,149,0,.4);
+  }
+  .wachtlijst h2 { font-size: clamp(1.9rem, 4.6vw, 2.8rem); }
+  .wachtlijst h2 span { color: var(--accent); }
+  .wachtlijst > p { color: var(--muted); max-width: 40em; margin: 14px auto 0; }
+  .wl-form { margin: 28px auto 0; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .wl-form input {
+    background: var(--navy-2); border: 1px solid var(--stroke); border-radius: 10px;
+    padding: 13px 16px; color: var(--text); font-size: 1rem; width: min(340px, 100%);
+  }
+  .wl-form input::placeholder { color: var(--muted); }
+  .wl-form input:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  .wl-form button {
+    background: var(--accent); color: #100a00; font-weight: 700; font-size: 1rem;
+    border: none; border-radius: 10px; padding: 13px 24px; cursor: pointer;
+  }
+  .wl-form button:hover { filter: brightness(1.06); }
+  .wl-note { margin-top: 16px; font-size: .8rem; color: var(--muted); }
+
   footer { margin-top: 72px; border-top: 1px solid var(--stroke); padding: 42px 0 58px; background: var(--navy-2); }
   .handtekening { font-style: italic; color: var(--muted); }
   .flinks { margin-top: 20px; display: flex; gap: 26px; flex-wrap: wrap; font-size: .9rem; }
@@ -185,6 +208,7 @@
         <a href="#app">De app</a>
         <a href="#privacy">Privacy</a>
         <a href="support.html">Support</a>
+        <a href="#wachtlijst">Wachtlijst</a>
       </nav>
     </div>
   </header>
@@ -202,7 +226,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8.94-.19 1.84-.86 3.29-.76 1.79.14 3.05.85 3.94 2.14-3.61 2.35-2.75 6.9.65 8.4-.63 1.4-1.44 2.79-2.96 2.39zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
             <span>Binnenkort in de App&nbsp;Store<small>laatste beoordelingsronde bij Apple</small></span>
           </span>
-          <span class="note">Gratis te downloaden · iPhone</span>
+          <span class="note">Gratis te downloaden · iPhone<br><a href="#wachtlijst">📬 Krijg bericht bij de launch →</a></span>
         </div>
       </div>
       <img class="phone" src="hero-app.jpg" alt="Vluchtlog-app: vluchtscherm met één grote Opstijgen-knop, locatie, weer en zonecheck." width="720" height="1553">
@@ -297,6 +321,18 @@
     <p>Jouw vluchtdata blijft van jou. Alles staat op je eigen toestel en, als je dat aanzet, in je
     eigen iCloud. Vluchtlog heeft geen eigen servers en kan dus niet eens bij je gegevens.
     In de App Store staat precies wat wij van jou kunnen zien: <b>niets</b>.</p>
+  </section>
+
+  <section class="wachtlijst" id="wachtlijst">
+    <p class="kicker">Bijna live</p>
+    <h2 class="kop">De app komt eraan.<br><span>Jij hoort het eerst.</span></h2>
+    <p>Vluchtlog ligt in de laatste beoordelingsronde bij Apple. Laat je e-mailadres achter en je
+    krijgt precies één mailtje: op de dag dat de app in de App Store staat.</p>
+    <form class="wl-form" action="https://buttondown.com/api/emails/embed-subscribe/vluchtlog" method="post" target="_blank">
+      <input type="email" name="email" required placeholder="naam@voorbeeld.nl" aria-label="Je e-mailadres">
+      <button type="submit">Zet mij op de lijst</button>
+    </form>
+    <p class="wl-note">Geen spam, geen nieuwsbriefgeweld. Uitschrijven kan altijd met één klik.</p>
   </section>
 </div>
 
