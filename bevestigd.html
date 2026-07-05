@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Je staat op de lijst — Vluchtlog</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a1120">
+<style>
+  :root {
+    --navy: #0a1120; --navy-2: #0f1a30; --panel: #13203a;
+    --stroke: rgba(255,255,255,.09); --text: #f4f6fa; --muted: #9fabc2; --accent: #ff9500;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--navy); color: var(--text); min-height: 100vh;
+    display: grid; place-items: center; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .kaart {
+    max-width: 560px; text-align: center; padding: 52px 34px;
+    background: var(--panel); border: 1px solid rgba(255,149,0,.4); border-radius: 18px;
+  }
+  .kicker {
+    font-family: "Avenir Next Condensed", "Arial Narrow", sans-serif;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
+    color: var(--accent); font-size: .95rem;
+  }
+  h1 {
+    font-family: "Avenir Next Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+    font-weight: 800; text-transform: uppercase; line-height: 1.02;
+    font-size: clamp(2rem, 7vw, 2.9rem); margin: 12px 0 16px;
+  }
+  h1 span { color: var(--accent); }
+  p { color: var(--muted); margin-bottom: 14px; }
+  .handtekening { font-style: italic; font-size: .9rem; margin-top: 6px; }
+  .terug { margin-top: 22px; display: inline-block; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="kaart">
+    <p class="kicker">Aanmelding bevestigd</p>
+    <h1>Je staat <span>op de lijst.</span></h1>
+    <p>Geregeld. Op de dag dat Vluchtlog in de App Store staat, krijg jij één mailtje.
+    Tot die tijd hoor je niets van ons — wij houden ook niet van inbox-lawaai.</p>
+    <p class="handtekening">Dit was een bevestiging van een dronepiloot die z'n logboek
+    zelf ook nooit bijhield.</p>
+    <a class="terug" href="/">← Terug naar vluchtlog.nl</a>
+  </div>
+</body>
+</html>
